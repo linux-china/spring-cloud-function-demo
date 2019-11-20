@@ -1,0 +1,4 @@
+### call greeter function
+GET http://localhost:8080/greeter/Jackie
+
+###
