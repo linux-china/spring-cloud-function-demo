@@ -5,8 +5,10 @@ Expose cloud function with REST API & RSocket
 
 # Function signatures
 
-* Function<String, Mono<String>>， Function<Mono<String>, Mono<Void>>
-* Supplier<Mono<String>>, Supplier<Flux<String>>
+* RPC: Function<String, Mono<String>>
+* request/stream: Function<String, Flux<String>>
+* fire_and_forget/metadataPush: Function<String, Void>
+* channel: Function<Flux<String>>, Flux<String>
 
 # Demo function
 
