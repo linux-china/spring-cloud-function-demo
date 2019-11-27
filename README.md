@@ -28,3 +28,4 @@ public class Greeter implements Function<String, Mono<String>> {
 # References
 
 * Spring Cloud Function: https://spring.io/projects/spring-cloud-function
+* Spring Cloud Function Docs: https://cloud.spring.io/spring-cloud-static/spring-cloud-function/3.0.0.RELEASE/reference/html/index.html
