@@ -1,9 +1,10 @@
-package org.mvnsearch.cloud.function.demo.functions;
+package org.mvnsearch.cloud.function.demo.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
  * @author linux_china
  */
 @Table("account")
-public class Account {
+public class Account implements Serializable {
     @Id
     private Integer id;
     private String nick;
