@@ -15,6 +15,11 @@ public class FunctionSignatureTest extends SpringBootBaseTestCase {
     @Autowired
     @Qualifier("greeter")
     private Object greeter;
+
+    @Autowired
+    @Qualifier("accountFindByNick")
+    private Object accountFindByNick;
+
     @Autowired
     private FunctionCatalog catalog;
 
@@ -22,7 +27,15 @@ public class FunctionSignatureTest extends SpringBootBaseTestCase {
     public void testSignature() {
         Class<?> clazz = greeter.getClass();
         System.out.println(clazz);
-        BeanFactoryAwareFunctionRegistry.FunctionInvocationWrapper function1 = catalog.lookup("uppercase");
-        System.out.println(function1);
+        BeanFactoryAwareFunctionRegistry.FunctionInvocationWrapper function1 = catalog.lookup("greeter");
+        System.out.println(function1.apply("Jackie"));
+    }
+
+    @Test
+    public void testAccountFindByNick() {
+        Class<?> clazz = accountFindByNick.getClass();
+        System.out.println(clazz);
+        BeanFactoryAwareFunctionRegistry.FunctionInvocationWrapper function1 = catalog.lookup("accountFindByNick");
+        System.out.println(function1.apply("linux_china"));
     }
 }
