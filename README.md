@@ -1,7 +1,7 @@
 Spring Cloud Function with RSocket
 ==================================
 
-Expose cloud function with REST API & RSocket
+Expose cloud function with REST API & RSocket with R2DBC as backend.
 
 # Function signatures
 
@@ -13,14 +13,13 @@ Expose cloud function with REST API & RSocket
 # Demo function
 
 ```java
-@Qualifier(NAME)
+@Controller
 public class Greeter implements Function<String, Mono<String>> {
-    public final static String NAME = "greeter";
 
     @Override
-    @MessageMapping(NAME)
-    public Mono<String> apply(String s) {
-        return Mono.just("Hello " + s);
+    @MessageMapping("greeter")
+    public Mono<String> apply(String name) {
+        return Mono.just("Hello " + name);
     }
 }
 ```
@@ -29,3 +28,4 @@ public class Greeter implements Function<String, Mono<String>> {
 
 * Spring Cloud Function: https://spring.io/projects/spring-cloud-function
 * Spring Cloud Function Docs: https://cloud.spring.io/spring-cloud-static/spring-cloud-function/3.0.0.RELEASE/reference/html/index.html
+* Spring Data R2DBC: https://spring.io/projects/spring-data-r2dbc
