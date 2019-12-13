@@ -10,5 +10,5 @@ CREATE TABLE account (
 )
     DEFAULT CHARSET = utf8;
 
-insert into account(nick, email, phone, created_at, updated_at)
-values ('linux_china', 'libing.chen@gmail.com', '1861111111', now(), now());
+insert into account(nick, email, phone, passwd, created_at, updated_at)
+values ('linux_china', 'libing.chen@gmail.com', '1861111111', '123456',now(), now());
