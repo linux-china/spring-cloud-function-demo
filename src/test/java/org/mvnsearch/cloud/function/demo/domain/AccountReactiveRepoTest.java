@@ -1,4 +1,4 @@
-package org.mvnsearch.cloud.function.demo.functions;
+package org.mvnsearch.cloud.function.demo.domain;
 
 import org.junit.jupiter.api.Test;
 import org.mvnsearch.cloud.function.demo.SpringBootBaseTestCase;
@@ -12,7 +12,6 @@ import reactor.test.StepVerifier;
  * @author linux_china
  */
 public class AccountReactiveRepoTest extends SpringBootBaseTestCase {
-
     @Autowired
     private AccountReactiveRepo accountRepo;
 
@@ -27,7 +26,6 @@ public class AccountReactiveRepoTest extends SpringBootBaseTestCase {
         Mono<Account> account = accountRepo.findByNick("linux_china");
         StepVerifier.create(account).expectNextCount(1).verifyComplete();
     }
-
 
     @Test
     public void testAuth() {
