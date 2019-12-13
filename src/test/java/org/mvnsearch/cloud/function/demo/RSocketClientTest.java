@@ -4,6 +4,7 @@ import io.rsocket.metadata.WellKnownMimeType;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.mvnsearch.cloud.function.demo.domain.Account;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.cbor.Jackson2CborDecoder;
 import org.springframework.http.codec.cbor.Jackson2CborEncoder;
@@ -44,8 +45,14 @@ public class RSocketClientTest {
     }
 
     @Test
-    public void testOperation() throws Exception {
-        Mono<String> user = requester.route("greeter").data("Jackie").retrieveMono(String.class);
-        System.out.println(user.block());
+    public void testGreeting() throws Exception {
+        Mono<String> greeting = requester.route("greeter").data("ArchSummit").retrieveMono(String.class);
+        System.out.println(greeting.block());
+    }
+
+    @Test
+    public void testAccountFindByNick() {
+        Mono<Account> account = requester.route("accountFindByNick").data("linux_china").retrieveMono(Account.class);
+        System.out.println(account.block());
     }
 }
