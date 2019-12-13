@@ -1,4 +1,7 @@
 ### call greeter function
-GET http://localhost:8080/greeter/Jackie
+GET http://localhost:8080/greeter/ArchSummit
+
+### call account findByNick function
+GET http://localhost:8080/accountFindByNick/linux_china
 
 ###
