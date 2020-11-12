@@ -1,6 +1,7 @@
 package org.mvnsearch.cloud.function.demo;
 
 import io.rsocket.metadata.WellKnownMimeType;
+import io.rsocket.transport.netty.client.WebsocketClientTransport;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -35,13 +36,12 @@ public class RSocketClientTest {
                 .dataMimeType(MediaType.APPLICATION_CBOR)
                 .metadataMimeType(MimeType.valueOf(WellKnownMimeType.MESSAGE_RSOCKET_COMPOSITE_METADATA.getString()))
                 .rsocketStrategies(rSocketStrategies)
-                .connectWebSocket(URI.create("ws://localhost:8080/rsocket"))
-                .block();
+                .transport(WebsocketClientTransport.create(URI.create("ws://localhost:8080/rsocket")));
     }
 
     @AfterAll
     public static void tearDown() {
-        requester.rsocket().dispose();
+        requester.rsocketClient().dispose();
     }
 
     @Test
