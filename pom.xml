@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
+        <version>2.4.12</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -22,8 +22,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <r2dbc-bom.version>Arabba-SR9</r2dbc-bom.version>
-        <spring-cloud-function.version>3.1.1</spring-cloud-function.version>
+        <r2dbc-bom.version>Arabba-SR11</r2dbc-bom.version>
+        <spring-cloud-function.version>3.1.5</spring-cloud-function.version>
     </properties>
 
     <dependencies>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>org.mariadb</groupId>
             <artifactId>r2dbc-mariadb</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.3</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
