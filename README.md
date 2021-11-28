@@ -30,3 +30,4 @@ public class Greeter implements Function<String, Mono<String>> {
 * Spring Cloud Function Docs: https://cloud.spring.io/spring-cloud-static/spring-cloud-function/3.0.0.RELEASE/reference/html/index.html
 * spring-cloud-function-rsocket: https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-rsocket
 * Spring Data R2DBC: https://spring.io/projects/spring-data-r2dbc
+* Event-Driven with Spring Cloud Function and Spring Cloud Stream: https://learning.oreilly.com/videos/event-driven-with-spring/10000MNLV2021128/
