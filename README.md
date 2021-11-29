@@ -5,7 +5,7 @@ Expose cloud function with REST API & RSocket with R2DBC as backend.
 
 # Function signatures
 
-* RPC: Function<String, Mono<String>>
+* RPC: Function<String, Mono<String>>, Function<Mono<User>, Mono<Greeting>>
 ```
 
 public Function<String, String> uppercase() {
