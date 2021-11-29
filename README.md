@@ -6,8 +6,31 @@ Expose cloud function with REST API & RSocket with R2DBC as backend.
 # Function signatures
 
 * RPC: Function<String, Mono<String>>
+```
+
+public Function<String, String> uppercase() {
+   return value -> value.toUpperCase();
+}
+
+public Function<Flux<String>, Flux<String>> reactiveUpperCase() {
+	return flux -> flux.map(val -> val.toUpperCase());
+}
+```
 * request/stream: Function<String, Flux<String>>
 * fire_and_forget/metadataPush: Function<String, Void>
+
+```
+public Consumer<Person> log() {
+    return person -> {
+        System.out.println("Received: " + person);
+    };
+}
+	
+public Function<Flux<?>, Mono<Void>> log() {
+	return flux -> flux.map(..).filter(..).then();
+}
+```
+
 * channel: Function<Flux<String>>, Flux<String>
 
 # Demo function
