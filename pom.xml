@@ -39,6 +39,11 @@
             <artifactId>spring-boot-starter-rsocket</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-function-grpc</artifactId>
+            <version>${spring-cloud-function.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-r2dbc</artifactId>
         </dependency>
