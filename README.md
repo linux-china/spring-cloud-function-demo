@@ -55,3 +55,4 @@ public class Greeter implements Function<String, Mono<String>> {
 * Spring Data R2DBC: https://spring.io/projects/spring-data-r2dbc
 * Event-Driven with Spring Cloud Function and Spring Cloud Stream: https://learning.oreilly.com/videos/event-driven-with-spring/10000MNLV2021128/
 * spring-cloud-function-grpc: https://github.com/spring-cloud/spring-cloud-function/tree/main/spring-cloud-function-adapters/spring-cloud-function-grpc
+* Functions and Spring Cloud Stream Applications for data driven microservices: https://github.com/spring-cloud/stream-applications
