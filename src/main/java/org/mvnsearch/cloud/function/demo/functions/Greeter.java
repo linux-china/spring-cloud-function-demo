@@ -2,7 +2,6 @@ package org.mvnsearch.cloud.function.demo.functions;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
-import reactor.core.publisher.Mono;
 
 import java.util.function.Function;
 
@@ -12,11 +11,11 @@ import java.util.function.Function;
  * @author linux_china
  */
 @Controller
-public class Greeter implements Function<String, Mono<String>> {
+public class Greeter implements Function<String, String> {
 
     @Override
     @MessageMapping("greeter")
-    public Mono<String> apply(String name) {
-        return Mono.just("Hello " + name);
+    public String apply(String name) {
+        return "Hello " + name;
     }
 }
