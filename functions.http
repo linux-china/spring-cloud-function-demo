@@ -4,4 +4,12 @@ GET http://localhost:8080/greeter/ArchSummit
 ### call account findByNick function
 GET http://localhost:8080/accountFindByNick/linux_china
 
-###
+### grpc test
+GRPC localhost:6048/org.springframework.cloud.function.grpc.MessagingService/requestReply
+
+{
+  "payload": "aGVsbG8=",
+  "headers": {
+    "spring.cloud.function.definition": "greeter"
+  }
+}
