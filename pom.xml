@@ -24,8 +24,8 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <r2dbc-bom.version>Arabba-SR12</r2dbc-bom.version>
-        <spring-cloud-function.version>3.2.1</spring-cloud-function.version>
+        <r2dbc-bom.version>Borca-RELEASE</r2dbc-bom.version>
+        <spring-cloud-function.version>3.2.2</spring-cloud-function.version>
     </properties>
 
     <dependencies>
@@ -50,7 +50,6 @@
         <dependency>
             <groupId>org.mariadb</groupId>
             <artifactId>r2dbc-mariadb</artifactId>
-            <version>1.0.3</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -80,7 +79,7 @@
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-bom</artifactId>
-                <version>1.43.2</version>
+                <version>1.44.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -107,7 +106,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.9.0</version>
                 <configuration>
                     <parameters>true</parameters>
                 </configuration>
