@@ -5,6 +5,7 @@ GET http://localhost:8080/greeter/ArchSummit
 GET http://localhost:8080/accountFindByNick/linux_china
 
 ### grpc test
+//@name grpc
 GRPC localhost:6048/org.springframework.cloud.function.grpc.MessagingService/requestReply
 
 {
