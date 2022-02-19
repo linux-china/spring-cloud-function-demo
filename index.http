@@ -1,11 +1,21 @@
 ### call greeter function
+//@namd greeter
 GET http://localhost:8080/greeter/ArchSummit
 
 ### call account findByNick function
+//@name http-nick
 GET http://localhost:8080/accountFindByNick/linux_china
 
+### RSocket test
+//@name rsocket-nick
+RSOCKET accountFindByNick
+Host: ws://localhost:8080/rsocket
+Content-Type: application/json
+
+"linux_china"
+
 ### grpc test
-//@name grpc
+//@name grpc-nick
 GRPC localhost:6048/org.springframework.cloud.function.grpc.MessagingService/requestReply
 
 {
