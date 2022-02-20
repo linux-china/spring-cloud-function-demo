@@ -1,6 +1,6 @@
 ### HTTP REST greeter test
-//@namd greeter
-GET http://localhost:8080/greeter/ArchSummit
+//@name http-greeter
+GET http://localhost:8080/greeter/linux_china
 
 ### RSocket greeter test
 //@name rsocket-greeter
