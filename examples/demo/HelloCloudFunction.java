@@ -13,6 +13,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
+import reactor.core.publisher.Mono;
 
 import java.util.function.Function;
 
@@ -25,12 +26,12 @@ public class HelloCloudFunction {
 
 
     @Controller("greeter")
-    public static class Greeter implements Function<String, String> {
+    public static class Greeter implements Function<String, Mono<String>> {
 
         @Override
         @MessageMapping("greeter")
-        public String apply(String name) {
-            return "Hello " + name;
+        public Mono<String> apply(String name) {
+            return Mono.just("Hello " + name);
         }
     }
 }
