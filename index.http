@@ -6,9 +6,9 @@ GET http://localhost:8080/greeter/linux_china
 //@name rsocket-greeter
 RSOCKET greeter
 Host: ws://localhost:8080/rsocket
-Content-Type: application/json
+Content-Type: text/plain
 
-"linux_china"
+linux_china
 
 ### grpc greeter test
 //@name grpc-gretter
