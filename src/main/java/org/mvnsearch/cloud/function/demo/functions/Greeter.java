@@ -10,7 +10,7 @@ import java.util.function.Function;
  *
  * @author linux_china
  */
-@Controller
+@Controller("greeter")
 public class Greeter implements Function<String, String> {
 
     @Override
