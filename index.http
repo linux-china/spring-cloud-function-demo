@@ -1,6 +1,25 @@
-### call greeter function
+### HTTP REST greeter test
 //@namd greeter
 GET http://localhost:8080/greeter/ArchSummit
+
+### RSocket greeter test
+//@name rsocket-greeter
+RSOCKET greeter
+Host: ws://localhost:8080/rsocket
+Content-Type: application/json
+
+"linux_china"
+
+### grpc greeter test
+//@name grpc-gretter
+GRPC localhost:6048/org.springframework.cloud.function.grpc.MessagingService/requestReply
+
+{
+  "payload": "aGVsbG8=",
+  "headers": {
+    "spring.cloud.function.definition": "greeter"
+  }
+}
 
 ### call account findByNick function
 //@name http-nick
@@ -13,14 +32,3 @@ Host: ws://localhost:8080/rsocket
 Content-Type: application/json
 
 "linux_china"
-
-### grpc test
-//@name grpc-nick
-GRPC localhost:6048/org.springframework.cloud.function.grpc.MessagingService/requestReply
-
-{
-  "payload": "aGVsbG8=",
-  "headers": {
-    "spring.cloud.function.definition": "greeter"
-  }
-}
